@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:slid="http://schemas.android.com/apk/res/com.zzy.uisliding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.zzy.uisliding.view.SlidingMenu
+        android:id="@+id/slid_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        slid:rightPadding="100dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            <!-- menu  -->
+            <include layout="@layout/left_menu" />
+            <!-- contentLayout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qq" >
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="toggleMenu"
+                    android:text="切换菜单" /> 
+            </LinearLayout>
+        </LinearLayout>
+    </com.zzy.uisliding.view.SlidingMenu>
+
+</RelativeLayout>
